@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en-IE" dir="ltr">
+<head profile="http://www.w3.org/2005/10/profile">
+<meta charset='utf-8'>
+<meta name="description" content="1to5PC: I make cool stuff">
+<meta name="keywords" content="YouTube">
+<meta name="author" content="Trivion bb">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="application-name" content="1to5PC"/>
+<meta name="msapplication-square70x70logo" content="/pics/any pic"/> (to make da site work put every pics in a pics folder and use only png files)
+<meta name="msapplication-square150x150logo" content="/pics/another pic"/>
+<meta name="msapplication-wide310x150logo" content="/pics/another pic"/>
+<meta name="msapplication-square310x310logo" content="/pics/another pic"/>
+<meta name="msapplication-TileColor" content="#3f4555"/>
+<title>1to5PC blog or somethin</title>
+<script>
+function setCookie(name, value, days) {
+	var expires = "";
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		expires = "; expires=" + date.toUTCString();
+	}
+	document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+	}
+	return "";
+}
+document.addEventListener("DOMContentLoaded", function(event)
+{
+	if (getCookie('display_cookie_notice') != 'no')
+		document.getElementById('cookie-notice').style.display = 'block';
+});
+</script>
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-37022602-1', 'auto');
+	ga('send', 'pageview');
+</script>
+<style type="text/css">
+	body {
+		background-color: #3f4555;
+		font-family: Helvetica, Arial, FreeSans, san-serif;
+		color: #ffffff;
+	}
+	#right_column {
+		float: right;
+		margin: 0 auto;
+		margin-top: 10px;
+		margin-right: 10px;
+		width: 250px;
+		font-size: 0.8em;
+	}
+	#container {
+		margin: 0 auto;
+		width: 730px;
+		overflow: auto;
+	}
+	#notice {
+		border:4px solid #ffa520;
+		color:#ffffff;
+		padding:1em;
+		width:94%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	#cookie-statement {
+		background-color: #5a5a5a;
+		border: none;
+		border-radius: 0;
+		color: #fff;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		margin: -8px -8px;
+		padding: 5px 0px 5px 15px;
+		position: relative;
+		width: 100%;
+		z-index: 999;
+	}
+	#cookie-statement a {
+		background-color: #303030;
+		border: 1px solid rgba(0,0,0,.1);
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		color: #fff;
+		cursor: pointer;
+		line-height: 200%;
+		padding: 4px 8px;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	table.reference
+	{
+	color: #000030;
+	background-color:#ffffff;
+	border:1px solid #c3c3c3;
+	border-collapse:collapse;
+	width:100%;
+	}
+	table.reference th
+	{
+	background-color:#e5eecc;
+	border:1px solid #c3c3c3;
+	padding:3px;
+	vertical-align:top;
+	}
+	table.reference td
+	{
+	border:1px solid #c3c3c3;
+	padding:3px;
+	vertical-align:top;
+	}
+	h1 { font-size: 3.8em; color: #c0baaa; margin-bottom: 3px; margin-top: 10px;}
+	h1 .small { font-size: 0.4em; }
+	h1 a { text-decoration: none }
+	h2 { padding: 12px; font-size: 1.5em; color: #c0baaa; line-height: 1.3em; border: 2px solid #706a6a;}
+	h3 { text-align: center; color: #c0baaa; }
+	a { color: #c0baaa; }
+	.cookie-notification { background: #fffbe4; border-color: #f8f6e6; overflow: hidden; }
+	.tagline { font-size: 1.6em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+	.download { float: right; }
+	pre { background: #000; color: #fff; padding: 15px;}
+	code { display:inline-block; padding:3px 3px 4px 1px; color:#ececec; font-family:monospace, monospace; line-height:10px; font-size:16px; vertical-align:middle; }
+	hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+	.kbd{
+		display:inline-block;
+		padding:3px 5px;
+		font-family:monospace, monospace;
+		font-size:11px;
+		line-height:10px;
+		color:#555;
+		vertical-align:middle;
+		background-color:#fcfcfc;
+		border:solid 1px #ccc;
+		border-bottom-color:#bbb;
+		border-radius:3px;
+		box-shadow:inset 0 -1px 0 #bbb
+	}
+	.footer { font-size: 0.9em; text-align:center; padding-top:30px; font-style: italic; }
+	.treeView{ -moz-user-select:none; position:relative; }
+	.treeView ul{ margin:0 0 0 -1.5em; padding:0 0 0 1.5em; }
+	.treeView li{ margin:0; padding:0; list-style-position:inside; list-style-image:none; cursor:auto; }
+	.treeView li li{ padding-left:1.5em; }
+	@media screen and (max-width: 1002px) {
+	  .hide_on_small_screens {
+	    display:none;
+	  }
+	}
+</style>
+</head>
+
+<body>
+<div id="cookie-notice" style="display: none;">
+  <div id="cookie-statement" class="cookie-notification">
+    <div class="text">
+      <span>This page uses Google services, which may serve <u>non-personalised</u> cookies for advertising, analytics and security.</span>
+      <a href="https://policies.google.com/technologies/cookies?hl=en_IE" target="_blank">See details</a>
+      <a href="#" onclick="document.getElementById('cookie-notice').style.display = 'none'; setCookie('display_cookie_notice', 'no', 365);">OK</a>
+    </div>
+  </div>
+  <div style="height: 15px;"></div>
+</div>
+<div id="right_column">
+<label for="lang_select">Change language:</label><select name="lang_select" id="lang_select" onchange="self.location='/'+this.options[this.selectedIndex].value">
+  <option dir="ltr" selected="selected" value="en">
+  🇮🇪/🇬🇧/🇺🇸 English (International)</option>
+  <option dir="ltr"  value="sq">
+  🇦🇱 Albanian (Shqip)</option>
+  <option dir="ltr"  value="ar">
+  🇸🇦 Arabic (العربية)</option>
+  <option dir="ltr"  value="hy">
+  🇦🇲 Armenian (Հայերեն)</option>
+  <option dir="ltr"  value="az">
+  🇦🇿 Azerbaijani (Azərbaycan)</option>
+  <option dir="ltr"  value="bn">
+  🇧🇩 Bangla (বাংলা)</option>
+  <option dir="ltr"  value="bs">
+  🇧🇦 Bosnian (Bosánski)</option>
+  <option dir="ltr"  value="bg">
+  🇧🇬 Bulgarian (Български)</option>
+  <option dir="ltr"  value="yue">
+  🇭🇰 Cantonese [Hong Kong] (香港粵文)</option>
+  <option dir="ltr"  value="ca">
+  🏴󠁥󠁳󠁣󠁴󠁿 Catalan (Català)</option>
+  <option dir="ltr"  value="zh">
+  🇨🇳 Chinese Simplified (简体中文)</option>
+  <option dir="ltr"  value="zh_TW">
+  🇹🇼 Chinese Traditional (正體中文)</option>
+  <option dir="ltr"  value="hr">
+  🇭🇷 Croatian (Hrvatski)</option>
+  <option dir="ltr"  value="cs">
+  🇨🇿 Czech (Čeština)</option>
+  <option dir="ltr"  value="da">
+  🇩🇰 Danish (Dansk)</option>
+  <option dir="ltr"  value="nl">
+  🇳🇱 Dutch (Nederlands)</option>
+  <option dir="ltr"  value="et">
+  🇪🇪 Estonian (eesti keel)</option>
+  <option dir="ltr"  value="fi">
+  🇫🇮 Finnish (Suomi)</option>
+  <option dir="ltr"  value="fr">
+  🇫🇷 French (Français)</option>
+  <option dir="ltr"  value="gl">
+  🏴󠁥󠁳󠁧󠁡󠁿 Galician (Galego)</option>
+  <option dir="ltr"  value="de">
+  🇩🇪 German (Deutsch)</option>
+  <option dir="ltr"  value="el">
+  🇬🇷 Greek (Ελληνικά)</option>
+  <option dir="ltr"  value="he">
+  🇮🇱 Hebrew (עברית)</option>
+  <option dir="ltr"  value="hi">
+  🇮🇳 Hindi (हिंदी)</option>
+  <option dir="ltr"  value="hu">
+  🇭🇺 Hungarian (Magyar)</option>
+  <option dir="ltr"  value="id">
+  🇮🇩 Indonesian (Bahasa Indonesia)</option>
+  <option dir="ltr"  value="ga">
+  🇮🇪 Irish (Gaeilge)</option>
+  <option dir="ltr"  value="it">
+  🇮🇹 Italian (Italiano)</option>
+  <option dir="ltr"  value="ja">
+  🇯🇵 Japanese (日本語)</option>
+  <option dir="ltr"  value="ko">
+  🇰🇷 Korean (한국어)</option>
+  <option dir="ltr"  value="ar_IQ">
+  🏴󠁩󠁲󠀱󠀶󠁿 Kurdish (کوردی)</option>
+  <option dir="ltr"  value="lv">
+  🇱🇻 Latvian (Latviešu)</option>
+  <option dir="ltr"  value="lt">
+  🇱🇹 Lithuanian (Lietuvių)</option>
+  <option dir="ltr"  value="mk">
+  🇲🇰 Macedonian (Македонски)</option>
+  <option dir="ltr"  value="ms">
+  🇲🇾 Malay (Bahasa Malaysia)</option>
+  <option dir="ltr"  value="mi">
+  🇳🇿 Maori (Māori)</option>
+  <option dir="ltr"  value="nb">
+  🇳🇴 Norwegian (Norsk)</option>
+  <option dir="ltr"  value="or">
+  🇮🇳 Odia (ଓଡ଼ିଆ)</option>
+  <option dir="ltr"  value="fa">
+  🇮🇷 Persian (پارسی)</option>
+  <option dir="ltr"  value="pl">
+  🇵🇱 Polish (Polski)</option>
+  <option dir="ltr"  value="pt_BR">
+  🇧🇷 Portuguese [BR] (Português [BR])</option>
+  <option dir="ltr"  value="pt">
+  🇵🇹 Portuguese [PT] (Português [PT])</option>
+  <option dir="ltr"  value="ro">
+  🇷🇴 Romanian (Română)</option>
+  <option dir="ltr"  value="ru">
+  🇷🇺 Russian (Русский)</option>
+  <option dir="ltr"  value="sr">
+  🇷🇸 Serbian [Latin] (Srpski [Latinica])</option>
+  <option dir="ltr"  value="si">
+  🇱🇰 Sinhala (සිංහල)</option>
+  <option dir="ltr"  value="sk">
+  🇸🇰 Slovak (Slovensky)</option>
+  <option dir="ltr"  value="sl">
+  🇸🇮 Slovenian (Slovenščina)</option>
+  <option dir="ltr"  value="es">
+  🇪🇸 Spanish (Español)</option>
+  <option dir="ltr"  value="sv">
+  🇸🇪 Swedish (Svenska)</option>
+  <option dir="ltr"  value="th">
+  🇹🇭 Thai (ไทย)</option>
+  <option dir="ltr"  value="tr">
+  🇹🇷 Turkish (Türkçe)</option>
+  <option dir="ltr"  value="uk">
+  🇺🇦 Ukrainian (Українська)</option>
+  <option dir="ltr"  value="ur">
+  🇵🇰 Urdu (اُردُو)</option>
+  <option dir="ltr"  value="vi">
+  🇻🇳 Vietnamese (Tiếng Việt)</option>
+  <option dir="ltr"  value="cy">
+  🏴󠁧󠁢󠁷󠁬󠁳󠁿 Welsh (Cymraeg)</option>
+</select>
+<div class="hide_on_small_screens">
+<a target="_blank" href="any another link">Want your language here?</a>&nbsp;<br />
+&nbsp;<br />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!--- Sidebar -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-8924382055379825"
+     data-ad-slot="8722233764"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+<div id="container">
+	<hr style="width:728px;">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!--- Banner -->
+	<ins class="adsbygoogle"
+	     style="display:inline-block;width:728px;height:90px"
+	     data-ad-client="ca-pub-8924382055379825"
+	     data-ad-slot="7142613500"></ins>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+	     (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	<hr style="width:728px;">
+	<h1><img border="0" src="/pics/any pic" srcset="/pics/another pic 1x, /pics/rufus-256.png 2x" alt="[1to5PC icon]"/>
+	<a target="_blank" href="your github link">1to5PC</a></h1>
+	<div class="tagline">
+		I make kool vids	</div>
+		<img border="0" src="/pics/a picture" srcset="/pics/another pic 1x, /pics/another pic 2x" alt="[screenshot of somethin]"/>		<p>I teaches kool stuff and I like playing minecraft</p>
+		<p>I do:			<ul>
+				<li>Minecraft</li>
+				<li>Github stuff</li>
+				<li>Linux stuff</li>
+				<li>Hanging out on Discord</li>
+			</ul>
+		</p>
+		<p></p>
+		<p>Oh, and I am <b>fast as fuck</b>
+		<h4>Supported Languages:</h4>
+		<p><table dir="ltr" cellspacing="0" cellpadding="0" border="0"><tr>
+			<td><i>Bahasa Indonesia</i></td><td>,&nbsp;</td>
+			<td><i>Bahasa Malaysia</i></td><td>,&nbsp;</td>
+			<td><i>Български</i></td><td>,&nbsp;</td>
+			<td><i>Čeština</i></td><td>,&nbsp;</td>
+			<td><i>Dansk</i></td><td>,&nbsp;</td>
+			<td><i>Deutsch</i></td><td>,&nbsp;</td>
+			<td><i>Ελληνικά</i></td><td>,&nbsp;</td>
+		</tr></table><table dir="ltr" cellspacing="0" cellpadding="0" border="0"><tr>
+			<td><i>English</i></td><td>,&nbsp;</td>
+			<td><i>Español</i></td><td>,&nbsp;</td>
+			<td><i>Français</i></td><td>,&nbsp;</td>
+			<td><i>Hrvatski</i></td><td>,&nbsp;</td>
+			<td><i>Italiano</i></td><td>,&nbsp;</td>
+			<td><i>Latviešu</i></td><td>,&nbsp;</td>
+			<td><i>Lietuvių</i></td><td>,&nbsp;</td>
+			<td><i>Magyar</i></td><td>,&nbsp;</td>
+			<td><i>Nederlands</i></td><td>,&nbsp;</td>
+			<td><i>Norsk</i></td><td>,&nbsp;</td>
+		</tr></table><table dir="ltr" cellspacing="0" cellpadding="0" border="0"><tr>
+			<td><i>Polski</i></td><td>,&nbsp;</td>
+			<td><i>Português</i></td><td>,&nbsp;</td>
+			<td><i>Português do Brasil</i></td><td>,&nbsp;</td>
+			<td><i>Русский</i></td><td>,&nbsp;</td>
+			<td><i>Română</i></td><td>,&nbsp;</td>
+			<td><i>Slovensky</i></td><td>,&nbsp;</td>
+			<td><i>Slovenščina</i></td><td>,&nbsp;</td>
+			<td><i>Srpski</i></td><td>,&nbsp;</td>
+		</tr></table><table dir="ltr" cellspacing="0" cellpadding="0" border="0"><tr>
+			<td><i>Suomi</i></td><td>,&nbsp;</td>
+			<td><i>Svenska</i></td><td>,&nbsp;</td>
+			<td><i>Tiếng&nbsp;Việt</i></td><td>,&nbsp;</td>
+			<td><i>Türkçe</i></td><td>,&nbsp;</td>
+			<td><i>Українська</i></td><td>,&nbsp;</td>
+			<td>简体中文</td><td>,&nbsp;</td>
+			<td>正體中文</td><td>,&nbsp;</td>
+			<td>日本語</td><td>,&nbsp;</td>
+			<td>한국어</td><td>,&nbsp;</td>
+			<td>ไทย</td><td>,&nbsp;</td>
+		</tr></table><table dir="ltr" cellspacing="0" cellpadding="0" border="0"><tr>
+			<td>עברית</td><td>,&nbsp;</td>
+			<td>العربية</td><td>,&nbsp;</td>
+			<td>پارسی</td><td>.</td>
+		</tr></table></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
